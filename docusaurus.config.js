@@ -8,7 +8,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Custom domain
-  url: 'https://docs.blockhead.finance',
+  url: 'https://developers.blockhead.finance',
   baseUrl: '/',                     // root path on the custom domain
 
   // These can stay; they’re mostly used for edit URLs and metadata

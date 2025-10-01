@@ -16,7 +16,12 @@ const config = {
   projectName: 'recurring-payments-docs',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  // v4-compatible location for the markdown broken-links hook
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: { defaultLocale: 'en', locales: ['en'] },
 
@@ -25,11 +30,11 @@ const config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.js',
-          routeBasePath: '/', // docs as homepage
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/', // docs are the homepage
         },
         blog: false, // no blog
-        theme: { customCss: './src/css/custom.css' },
+        theme: { customCss: require.resolve('./src/css/custom.css') },
       },
     ],
   ],
@@ -46,8 +51,22 @@ const config = {
     footer: {
       style: 'dark',
       links: [
-        { title: 'Docs', items: [{ label: 'Overview', to: '/' }] },
-        { title: 'Community', items: [{ label: 'GitHub', href: 'https://github.com/DopaMIM/recurring-payments-docs' }] },
+        {
+          title: 'Docs',
+          items: [
+            // 👇 point directly to your overview doc route (not '/')
+            { label: 'Overview', to: '/overview' },
+            { label: 'Core Functions', to: '/core-functions' },
+            { label: 'Events', to: '/events' },
+            { label: 'Networks', to: '/networks' },
+            { label: 'Best Practices', to: '/best-practices' },
+            { label: 'Glossary', to: '/glossary' },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [{ label: 'GitHub', href: 'https://github.com/DopaMIM/recurring-payments-docs' }],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Blockhead. Built with Docusaurus.`,
     },

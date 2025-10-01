@@ -9,11 +9,11 @@ const config = {
 
   // Custom domain
   url: 'https://developers.blockhead.finance',
-  baseUrl: '/',                     // root path on the custom domain
+  baseUrl: '/', // root path on the custom domain
 
-  // These can stay; they’re mostly used for edit URLs and metadata
-  organizationName: 'your-org',
-  projectName: 'your-repo',
+  // Repo metadata
+  organizationName: 'DopaMIM',
+  projectName: 'recurring-payments-docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -26,9 +26,9 @@ const config = {
       {
         docs: {
           sidebarPath: './sidebars.js',
-          routeBasePath: '/',        // docs as homepage
+          routeBasePath: '/', // docs as homepage
         },
-        blog: false,                 // no blog
+        blog: false, // no blog
         theme: { customCss: './src/css/custom.css' },
       },
     ],
@@ -40,14 +40,14 @@ const config = {
       logo: { alt: 'Blockhead Logo', src: 'img/logo.svg' },
       items: [
         { type: 'doc', docId: 'overview', position: 'left', label: 'Docs' },
-        { href: 'https://github.com/your-org/your-repo', label: 'GitHub', position: 'right' },
+        { href: 'https://github.com/DopaMIM/recurring-payments-docs', label: 'GitHub', position: 'right' },
       ],
     },
     footer: {
       style: 'dark',
       links: [
         { title: 'Docs', items: [{ label: 'Overview', to: '/' }] },
-        { title: 'Community', items: [{ label: 'GitHub', href: 'https://github.com/your-org/your-repo' }] },
+        { title: 'Community', items: [{ label: 'GitHub', href: 'https://github.com/DopaMIM/recurring-payments-docs' }] },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Blockhead. Built with Docusaurus.`,
     },

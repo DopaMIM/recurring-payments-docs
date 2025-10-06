@@ -7,6 +7,7 @@ const sidebars = {
     'core-functions',
     'events',
     'networks',
+    'recurring-payments-abi',
     'best-practices',
     'glossary',
 
@@ -22,6 +23,7 @@ const sidebars = {
         'automation-events',
         'automation-networks',
         'automation-quickstart',
+        'automation-abi',
       ],
     },
   ],
